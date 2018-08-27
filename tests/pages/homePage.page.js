@@ -39,8 +39,13 @@ class HomePage extends Page {
         });
     }
 
+    // common methods across features
     validateUrl(expectedUrl) {        
         return expect(browser.getUrl()).to.contain(expectedUrl);
+    }
+
+    inputElmByName(inputName) {
+        return browser.element('//input[@name="' + inputName + '"]');
     }
 }
 export default new HomePage();
