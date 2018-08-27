@@ -10,4 +10,3 @@ Scenario: Check for advanced search
     Then  I expect the top most search result item has title "Greening Citizenship"
     And   This item is published in "2012" 
     And   This item is authored by "Andy Scerri"
-

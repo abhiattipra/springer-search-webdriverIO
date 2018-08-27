@@ -21,8 +21,14 @@ class HomePage extends Page {
         return browser.element('//*[@id="results-list"]/li[1]//h2/a[contains(@class, "title")]')
     }
 
+    dismissCookiePolicy() {
+        let closeBtn = browser.element('//*[@title="Close Banner"]');
+        closeBtn.click();
+    }
+
     loadHomePage() {
         super.open('/');
+        this.dismissCookiePolicy();
     }
 
     setSearchString(str) {
